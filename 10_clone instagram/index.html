@@ -28,6 +28,14 @@
               <input type="password" name="password" placeholder="Senha" />
               <input type="submit" value="Entrar" />
             </form>
+            <form id="register-form" hidden>
+              <input type="email" name="email" placeholder="E-mail" required />
+              <input type="text" name="name" placeholder="Nome completo" />
+              <input type="text" name="username" placeholder="Nome de usuário" required />
+              <input type="password" name="password" placeholder="Senha (mín. 6 caracteres)" required />
+              <input type="submit" value="Cadastre-se" />
+            </form>
+            <p id="form-message" role="alert"></p>
             <div class="separator">
               <div class="line"></div>
               <span>Ou</span>
@@ -45,7 +53,7 @@
             </div>
           </div>
           <div id="register-container">
-            <p>Não tem uma conta? <a href="#">Cadastre-se</a></p>
+            <p id="toggle-text">Não tem uma conta? <a href="#" id="toggle-form">Cadastre-se</a></p>
           </div>
           <div id="get-app-container">
             <p>Obtenha o aplicativo.</p>
@@ -77,5 +85,7 @@
       </nav>
       <p id="copyright">&copy;2026 Instagram from Meta</p>
     </footer>
+    <script src="js/api.js"></script>
+    <script src="js/login.js"></script>
   </body>
 </html>

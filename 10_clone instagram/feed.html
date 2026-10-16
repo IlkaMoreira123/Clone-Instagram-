@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feed • Instagram</title>
+    <link rel="stylesheet" href="css/feed.css" />
+    <link rel="shortcut icon" href="img/imagem favic.png" type="image/x-icon" />
+  </head>
+  <body>
+    <header id="topbar">
+      <img src="img/logo_instagram.jpg" alt="Instagram" id="topbar-logo" />
+      <div id="topbar-user">
+        <span id="current-user"></span>
+        <button id="logout-btn" type="button">Sair</button>
+      </div>
+    </header>
+
+    <main id="feed-container">
+      <form id="new-post-form" class="card">
+        <h2>Novo post</h2>
+        <input type="url" name="imageUrl" placeholder="Link da imagem (https://...)" required />
+        <textarea name="caption" rows="2" maxlength="2200" placeholder="Escreva uma legenda..."></textarea>
+        <button type="submit">Publicar</button>
+        <p class="form-error" role="alert"></p>
+      </form>
+
+      <p id="feed-status"></p>
+      <section id="posts"></section>
+    </main>
+
+    <template id="post-template">
+      <article class="card post">
+        <header class="post-header">
+          <span class="avatar"></span>
+          <strong class="post-author"></strong>
+          <button type="button" class="delete-post" title="Apagar post" hidden>Apagar</button>
+        </header>
+        <img class="post-image" alt="" />
+        <div class="post-body">
+          <button type="button" class="like-btn" aria-label="Curtir">♡</button>
+          <p class="likes"></p>
+          <p class="caption"></p>
+          <ul class="comments"></ul>
+          <time class="post-date"></time>
+        </div>
+        <form class="comment-form">
+          <input type="text" name="text" maxlength="500" placeholder="Adicione um comentário..." required />
+          <button type="submit">Publicar</button>
+        </form>
+      </article>
+    </template>
+
+    <script src="js/api.js"></script>
+    <script src="js/feed.js"></script>
+  </body>
+</html>
