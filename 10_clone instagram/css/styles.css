@@ -66,6 +66,39 @@ body {
   margin: 5px auto;
 }
 
+#register-form {
+  margin-top: 20px;
+}
+
+#register-form input {
+  display: block;
+  font-size: 12px;
+  padding: 12px 9px;
+  background-color: #fafafa;
+  border: 1px solid #dbdbdb;
+  border-radius: 3px;
+  width: 268px;
+  margin: 5px auto;
+}
+
+#login-form input[type="submit"],
+#register-form input[type="submit"] {
+  cursor: pointer;
+}
+
+#login-form input[type="submit"]:enabled:hover,
+#register-form input[type="submit"]:enabled:hover {
+  background-color: #0095f6;
+}
+
+#form-message {
+  color: #ed4956;
+  font-size: 13px;
+  margin: 10px 30px 0;
+  min-height: 16px;
+}
+
+#register-form input[type="submit"],
 #login-form input[type="submit"] {
   background-color: #b2dffc;
   color: #fff;
